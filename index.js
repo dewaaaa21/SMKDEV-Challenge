@@ -9,10 +9,14 @@ Tugas kamu adalah:
 
 Write a program to use for loop to print the following reverse number pattern */
 
-for (let i = 5; i >= 1; i--) {
-  let pattern = "";
-  for (let j = i; j >= 1; j--) {
-    pattern += j + " ";
+let n = 5;
+let pattern = "";
+
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j <= n - i + 1; j++) {
+    pattern += n - j - i + 2 + " ";
   }
-  console.log(pattern);
+  pattern += "\n";
 }
+
+console.log(pattern);
